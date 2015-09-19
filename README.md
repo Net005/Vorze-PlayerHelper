@@ -15,6 +15,8 @@ Zoom Player  - http://www.inmatrix.com/zplayer/
 
 Microsoft .NET framework 4.5.2  - http://www.microsoft.com/en-us/download/details.aspx?id=42642
 
+Vorze Player Helper - https://github.com/Net005/Vorze-PlayerHelper/releases
+
 # HOWTO
 
 ##### Step 1 - Enable Control API in Zoom Player setings
