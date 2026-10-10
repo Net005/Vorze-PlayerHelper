@@ -51,7 +51,7 @@ Ask only for information or authorization that actually blocks progress. Existin
 ## Git and deployment
 
 - Commit and push when requested. Confirm success and report the commit ID. A push is not a deployment; do not infer permission for unrelated publishing or production changes.
-- Default deployment workflow: build the tested revision locally, transfer it directly to authorized instances and upgrade in place. Push source as requested, but do not wait for GitHub builds. Preserve settings, back up affected artifacts and verify the running checksum/version and health. Store no private deployment addresses or credentials in the repository.
+- For a requested immediate deployment, build the tested revision locally and transfer it directly to the authorized instances without waiting for GitHub builds. Keep persistent stack images on their existing `latest` tags and preserve registry pull policies. Use a temporary local-build override for that deployment; never pin the stack to a local image unless explicitly requested. Preserve settings, back up affected artifacts and verify running checksums, versions and health. For Silo plugins update the persistent plugin archive too. Keep private connection details out of the repository.
 - Check release workflows before choosing asset names or build commands. Keep component versions and packaged metadata consistent.
 - Verify the target before any deployment. A local Docker connection may not be the intended remote server. Keep connection details private and use them only at runtime.
 - Preserve configured settings, data volumes and persistent state. Back up affected artifacts before an in-place upgrade and verify the actual running version, health and relevant behavior afterward.
